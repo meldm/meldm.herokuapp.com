@@ -1,0 +1,37 @@
+{{!< default}}
+{{#is "tag"}}
+	{{#tag}}
+		<header class="wrap">
+		  <h1 class="page-title">{{name}}</h1>
+		  <p class="text-center">A collection of <strong>{{total}}</strong> posts tagged with {{name}}.</p>
+			<!-- <p>{{description}}</p> -->
+		</header>
+
+		{{#if image}}
+			<div class="img-wrap">
+			  <img src="{{image}}" />
+			<div>
+		{{/if}}
+	{{/tag}}
+
+	<section class="wrap">
+		{{#foreach posts limit="all"}}
+			<article class="{{post_class}}">
+				<section class="list-content">
+					<header class="cover post post-head">
+						<h1 class="cover-heading post-title headline"><a class="post-title-link" href="{{url}}">{{{title}}}</a></h1>
+						<section class="blog-blocks">
+							<span>Posted on <time datetime="{{date format="DD-MM-YY"}}">{{date format='DD MMMM, YYYY'}}</time> {{#if tags}}in {{tags separator=", "}}{{/if}}</span>
+						</section>
+					</header>
+					<section class="post-excerpt">
+						<div class="cover post post-body">
+							<p>{{excerpt words="30"}}<a class="read-more" href="{{url}}">...</a></p>
+						</div>
+					</section>
+				</section>
+				<hr class="post-hr" />
+			</article>
+		{{/foreach}}
+	</section>
+{{/is}}

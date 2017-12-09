@@ -1,0 +1,27 @@
+<header class="site-header" role="banner">
+	<section class="nav-wrap">
+
+		<nav class="site-nav">
+			<a class="site-title-link" href="{{@blog.url}}">
+				<h1> DM </h1>
+			</a>
+			<div id="hamburgler" class="hamburgler-icon-wrapper">
+				<span class="hamburgler-icon"></span>
+			</div>
+			<ul class="nav">
+				{{#foreach navigation}}
+					<a class="after-a" href="{{url absolute="true"}}"><li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation">{{label}}</li></a>
+				{{/foreach}}
+			</ul>
+		</nav>
+
+	</section>
+</header>
+
+<div class="hamburgler-menu">
+	<ul class="hamburgler-menu-list">
+		{{#foreach navigation}}
+			<a href="{{url absolute="true"}}" role="presentation">{{label}}</a>
+		{{/foreach}}
+	</ul>
+</div>
