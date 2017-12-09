@@ -2,9 +2,9 @@
 
 A minimal, personal theme for [Ghost](http://github.com/tryghost/ghost/).
 
-![index](https://imgur.com/a/XD9a5)
+![index](https://i.imgur.com/ANY952R.png)
 
-![post](https://imgur.com/a/sPjWg)
+![post](https://i.imgur.com/dyfUbEq.png)
 
 ## Copyright & License
 
